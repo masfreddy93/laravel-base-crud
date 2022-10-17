@@ -3,6 +3,13 @@
 @section('content')
     <h2>Elenco comics</h2>
 
+    <section>
+        <div class="container">
+            <a href=" {{ route('comics.create') }} ">Inserisci Comic</a>
+        </div>
+    </section>
+    <br>
+
     <table>
         <thead>
             <tr>
