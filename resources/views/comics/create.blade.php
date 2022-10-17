@@ -4,7 +4,10 @@
     
     <div class="container">
         <br>
-        <form action="">
+        <form action=" {{ route('comics.store')  }} " method="POST">
+
+            @csrf
+
             <input type="text" name="title" placeholder="Nome fumetto">
             <input type="text" name="description" placeholder="Descrizione">
             <input type="text" name="thumb" placeholder="Link Immagine">
