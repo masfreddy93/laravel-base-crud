@@ -20,7 +20,11 @@
             @foreach ($comics as $c)
                 <tr>
                     <td> {{ $c->id }} </td>
-                    <td> {{ $c->title }} </td>
+                    <td>
+                        <a href=" {{ route('comics.show', $c) }} ">
+                            {{ $c->title }}
+                        </a>
+                    </td>
                     <td> {{ $c->description }} </td>
                     <td> {{ $c->thumb }} </td>
                     <td> {{ $c->price }} </td>
