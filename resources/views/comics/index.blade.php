@@ -5,7 +5,7 @@
 
     <section>
         <div class="container">
-            <a href=" {{ route('comics.create') }} ">Inserisci Comic</a>
+            <a href=" {{ route('comics.create') }} ">Inserisci comic</a>
         </div>
     </section>
     <br>
@@ -38,6 +38,19 @@
                     <td> {{ $c->series }} </td>
                     <td> {{ $c->sale_date }} </td>
                     <td> {{ $c->type }} </td>
+                    <td>
+                        <a href="{{ route('comics.edit', $c) }}">Modifica</a>
+                    </td>
+                    <td>
+                        <form action="{{ route('comics.destroy', $c) }}" method="POST">
+
+                            @csrf
+                            @method('DELETE')
+
+                            <input type="submit" value="Elimina">
+                            {{-- <a href="{{ route('comics.destroy', $comic) }}">Elimina</a> --}}
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

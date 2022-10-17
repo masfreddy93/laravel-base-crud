@@ -9,6 +9,19 @@
             <p> {{ $comic->description }} </p>
             <span> Price --> € {{ $comic->price }} </span>
         </div>
+        <br>
+        <a href="{{ route('comics.edit', $comic) }}">Modifica fumetto</a>
+        <br>
+        <br>
+        
+        <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+            
+            @csrf
+            @method('DELETE')
+
+            <input type="submit" value="Elimina">
+            {{-- <a href="{{ route('comics.destroy', $comic) }}">Elimina</a> --}}
+        </form>
     </div>
     
 @endsection
