@@ -5,7 +5,7 @@
 
     <section>
         <div class="container">
-            <a href=" {{ route('comics.create') }} ">Inserisci comic</a>
+            <a style="float: right" href=" {{ route('comics.create') }} ">Inserisci comic</a>
         </div>
     </section>
     <br>
